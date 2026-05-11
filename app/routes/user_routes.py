@@ -24,6 +24,10 @@ def create():
     if not data or "name" not in data:
         return jsonify({"message": "Dados inválidos"}), 400
     user = create_user(data)
+
+    if user is None:
+        return jsonify({"message": "Usuário já cadastrado"}), 400
+
     return jsonify(user), 201
 
 @user_bp.route("/<int:user_id>", methods=["PUT"])

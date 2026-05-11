@@ -9,6 +9,15 @@ def get_user_by_id(user_id):
 
 def create_user(data):    
     global current_id
+
+    existing_user = next(
+        (u for u in users if u["name"] == data["name"]),
+        None
+    )
+
+    if existing_user:
+        return None
+
     user = {
         "id": current_id,
         "name": data["name"]        
