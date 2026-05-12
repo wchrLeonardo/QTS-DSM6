@@ -6,12 +6,14 @@ import time
 
 from selenium.webdriver.chrome.options import Options
 
+
 def get_headless_driver():
     options = Options()
     options.add_argument("--headless")
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     return webdriver.Chrome(options=options)
+
 
 def test_create_user_e2e():
     driver = get_headless_driver()
