@@ -36,4 +36,4 @@ jobs:
         sleep 5
         
     - name: Run tests with Pytest
-      run: pytest
+      run: python -m pytest
