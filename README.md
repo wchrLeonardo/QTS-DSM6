@@ -104,7 +104,21 @@ Ao realizar qualquer **Push** para o GitHub, os robôs entram em ação e proced
 Para avaliar ou dar continuidade ao desenvolvimento de forma local, execute os passos a seguir:
 
 ### 1. Preparando o Ambiente (Terminal)
-Dentro da sua Virtual Environment (venv), instale o cinturão de utilidades:
+Primeiro, crie e ative sua Virtual Environment (venv) para isolar as dependências do projeto:
+
+**No Windows:**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+**No Linux/Mac:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Com a venv ativada, instale o cinturão de utilidades e dependências:
 ```bash
 python -m pip install --upgrade pip
 pip install -r requirements.txt
